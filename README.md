@@ -1,15 +1,12 @@
 # crossword-web-app
 
-# Crossword Generator Application
-
 ## Structure folders
 * app:
   > main process of application  
   > **src** folder is the path folder of application where ***src/main.py*** is the entry file
-* documentation: 
-  - /notes - has todo files for the process and notes
-  - /resources.txt - keep resources
-  - /pdfs - useful docs and resources
+* docs: 
+  - basic rules - βασικοί κανόνες
+  - process structure - δομή κώδικα
 
 ## Setup Environment
 It is better to run this application in a virual environment  
