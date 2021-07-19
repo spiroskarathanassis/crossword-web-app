@@ -1,0 +1,11 @@
+Tips:
+  1. In black boxes have priority in the available cell that
+    - fisrtly, in both dimensions of cell do not exist anywhere else other blackbox
+    - secondly in one of its row or column do not exist anywhere else other blackbox
+    - lastly choose randomly one of availables
+
+Required
+  - (diagonal symmetric)
+  - can create a word (3+ letters)
+  - expect words to exists across & down
+  - Crosswords must have all-over interlock

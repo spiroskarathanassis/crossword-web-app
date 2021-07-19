@@ -1,0 +1,264 @@
+@import './globals.scss';
+
+$emphasis: #fff8e1;
+$clueContainerHeight: 250px;
+
+@mixin boxsize($size, $inputSize, $inputPadding) {
+  .box {
+    width: $size;
+    height: $size;
+
+    input {
+      width: $inputSize;
+      height: $inputSize;
+      padding: $inputPadding;
+      font-size: $size / 2;
+    }
+  }
+}
+
+.cross-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+
+  .message {
+    margin: 1rem 0;
+    height: 4rem;
+    width: 100%;
+    
+    .clue-text {
+      background: $primary;
+      justify-content: space-between;
+      width: 100%;
+      padding: 12px 0;
+
+      p {
+        margin-block: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: fit-content;
+      }
+
+      .point {
+        white-space: nowrap;
+        font-weight: bold;
+      }
+      
+      .clue {
+        padding-right: 12px;
+      }
+    }
+
+    .msg-p {
+      padding: 4px 12px;
+      background: #e6ee9c;
+      justify-content: flex-start;
+    }
+
+    .mdg-p, .clue-text {
+      display: flex;
+      align-items: center;
+      border-radius: 4px;
+      
+      span {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    justify-content: space-evenly;
+      
+    .grid-wrapper {
+      display: grid;
+      border: 2px solid rgb(0,0,0);
+      border-width: 3px 2px 2px 3px ;
+      border-radius: 2px;
+      width: max-content;
+      height: fit-content;
+      @include boxsize(40px, 32px, 4px);
+      
+      .box {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+        border-right: 1px solid rgba(0, 0, 0, 0.8);
+        
+        .input-wrapper {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          
+          .point-block {
+            position: absolute;
+            opacity: 0.4;
+            font-size: 0.8em;
+            top: 0;
+            left: 0;
+            
+            &:focus, &:active, &:visited, &:hover {
+              opacity: 0.7;
+            }
+          }
+          
+          .active-opacity {
+            opacity: 1;
+          }
+        }
+      
+        input {
+          border: none;
+          text-align: center;
+          font-size: 18px;
+          font-family: sans-serif;
+          font-weight: 200;
+      
+          &.box-visible {
+            background: #cfd8dc;
+          }
+      
+          &:focus-visible {
+            outline: none;
+            background: $emphasis;
+          }
+        }
+        
+        .blackbox {
+          background: rgba(0, 0, 0, 0.8);
+        }
+      }
+    }
+    
+    .clue-container {
+      display: grid;
+      grid-gap: 1rem;
+      padding: 0 1rem;
+    
+      .clue-dimension {
+        max-width: 400px;
+      }
+    
+      h3 {
+        background: $primary;
+        padding: 1rem 2rem 3rem 2rem;
+        margin: 0;
+      }
+    
+      .clue-list-wrapper {
+        background: $p-dark;
+        padding: 1rem 2rem;
+    
+        ol {
+          list-style-type: none;
+        }
+    
+        .clue-list {
+          background: $p-light;
+          margin-top: -3rem;
+          padding: 0;
+          overflow-y: scroll;
+          max-height: $clueContainerHeight;
+          min-width: 200px;
+    
+          li {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 1rem 0.4rem;
+    
+            &:hover, &:active, &:focus {
+              background: $s-light;
+              cursor: pointer;
+            }
+            &.active {
+              background: $secondary;
+            }
+            .clue-pointer {
+              margin-right: 0.5rem;
+              padding: 2px 6px;
+              background: $s-light;
+              border-radius: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .cross-container {
+    padding: 1rem;
+    margin-top: 0;
+
+    section {
+      grid-template-columns: auto;
+      gap: 1rem 0;
+
+      .grid-wrapper {
+        @include boxsize(32px, 26px, 3px);
+
+        .box .input-wrapper .point-block {
+          font-size: 0.7em;
+        }
+      }
+
+      .clue-container {
+        grid-auto-flow: column;
+        grid-template-columns: repeat(2, calc(50% - 4px));
+        padding: 0;
+        
+        h3 {
+          padding: 0.5rem 1rem 1.5rem 1rem;
+        }
+        .clue-list-wrapper {
+          padding: 0.5rem 1rem;
+          
+          .clue-list {
+            margin-top: -1.5rem;
+            
+            li {
+              padding: 0.6rem 0.4rem;
+            }
+          }
+        }
+      }
+
+      .grid-container {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .cross-container {
+    section {
+      .grid-wrapper {
+        @include boxsize(22px, 20px, 1px);
+        .box {
+          border: none;
+
+          .input-wrapper .point-block { 
+            font-size: 0.5em;
+            opacity: 1;
+          }
+        }
+      }
+
+      .clue-container {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    }
+  }
+}

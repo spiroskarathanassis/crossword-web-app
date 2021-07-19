@@ -1,0 +1,177 @@
+@import './globals.scss';
+$semantic: #4e342e;
+
+.home-pg {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 2rem 0;
+
+  .img-container {
+    background: url('../../assets/images/cw-bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    filter: blur(3px);
+    width: 100%;
+    height: 100%;
+  }
+
+}
+.modal-form {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .form-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    height: min-content;
+    width: 80%;
+    max-width: 35rem;
+    background:rgba(245, 245, 245, 0.6);
+    border-radius: 12px;
+    border: 1px solid $secondary;
+    contain: content;
+
+    h4, form, .footer {
+      padding: 1rem 2rem;
+    }
+
+    h4 {
+      margin: 0;
+      font-family: Geneva, Tahoma, sans-serif;
+      font-size: 1em;
+      background: rgb(117 117 117 / 60%);
+      text-align: center;
+    }
+    form {
+      padding: 3rem 2rem;
+      
+      .input-fields {
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        
+        .field {
+          margin-bottom: 5px;
+          display: grid;
+          grid-template-columns: repeat(2, 160px);
+          
+          label, input, select {
+            font-family: Geneva, Tahoma, sans-serif;
+          }
+          input, select {
+            border: 0;
+            border-bottom: 2px solid $p-dark;
+            font-size: 0.9em;
+            font-weight: 400;
+            padding: 3px 8px;
+            background: none;
+            color: #212121;
+            
+            &:focus-visible {
+              border-color: $semantic;
+              outline: none;
+            }
+          }
+          select {
+            padding: 3px 4px;
+          }
+        }
+      }
+
+      .preview-fields {
+        margin-top: 2rem;
+
+        ul {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          list-style-type: none;
+          margin-block-end: 0;
+          padding-inline-start: 0;
+
+          li {
+            color: #546e7a;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            margin-top: 5px;
+
+            .img {
+              width: 20px;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+
+    }
+    .footer {
+      background: $p-dark;
+      display: flex;
+      justify-content: flex-end;
+
+      button {
+        background-color: $p-dark;
+        border: 1px solid $p-light;
+        color: $p-light;
+        border-radius: 6px;
+        padding: 12px 24px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $p-light;
+          color: $secondary;
+        }
+        &.btn-disabled {
+        background-color: $p-dark;
+          color: $p-light;
+          cursor: default;
+        }
+      } 
+    }
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  .modal-form {
+    
+    .form-container {
+      form {
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: center;
+
+        .input-fields {
+          .field {
+            margin: 10px 0;
+            row-gap: 5px;
+            grid-template-columns: 150px;
+          }
+        }
+        .preview-fields {
+          display: none;
+        }
+      } 
+    }
+  }
+}

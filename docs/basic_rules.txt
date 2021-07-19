@@ -1,0 +1,37 @@
+Basic Rules
+
+1. The pattern of black-and-white squares must be symmetrical. Generally this rule means that 
+  if you turn the grid upside-down, the pattern will look the same as it does right-side-up.
+
+2. Do not use too many black squares. In the old days of puzzles, black squares were not 
+  allowed to occupy more than 16% of a grid. Nowadays there is no strict limit, in order 
+  to allow maximum flexibility for the placement of theme entries. Still, "cheater" black 
+  squares (ones that do not affect the number of words in the puzzle, but are added to make 
+  constructing easier) should be kept to a minimum, and large clumps of black squares 
+  anywhere in a grid are strongly discouraged.
+
+3. Do not use unkeyed letters (letters that appear in only one word across or down). 
+  In fairness to solvers, every letter has to appear in both an Across and a Down word.
+
+4. Do not use two-letter words. The minimum word length is three letters.
+
+5. The grid must have all-over interlock. In other words, the black squares may not cut 
+  the grid into separate pieces. A solver, theoretically, should be able to proceed from 
+  any section of the grid to any other without having to stop and start over.
+
+6. Long theme entries must be symmetrically placed. If there is a major theme entry three 
+  rows down from the top of the grid, for instance, then there must be another theme 
+  entry in the same position three rows up from the bottom. Also, as a general rule, 
+  no nontheme entry should be longer than any theme entry.
+
+7. Do not repeat words in the grid.
+
+8. Do not make up words and phrases. Every answer must have a reference or else be in 
+  common use in everyday speech or writing.
+
+
+Optional Rules
+Do not repeatedly use words that are loose, joined together, or otherwise distorted (such as an reversed word).
+
+
+Reference: https://www.cruciverb.com/index.php?action=ezportal;sa=page;p=21

@@ -1,0 +1,9 @@
+.DS_Store
+node_modules
+.vscode
+
+bin
+lib
+
+.pytest_cache
+/pyenv.cfg
