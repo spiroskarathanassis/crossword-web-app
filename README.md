@@ -1,5 +1,7 @@
 # crossword-web-app
 
+<img src="./assets/preview-app.gif" alt="">
+
 ## Structure folders
 * app:
   > main process of application  
@@ -36,6 +38,7 @@ It is better to run this application in a virual environment
   // Run vue app
   $ cd app/frontend/cross_app
   $ npm install / yarn install
-  // see readme.md
+  $ npm run serve / yarn serve
+  // see relative readme.md
 
 ```
