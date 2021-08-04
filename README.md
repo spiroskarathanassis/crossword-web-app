@@ -1,44 +1,70 @@
 # crossword-web-app
 
+## Preview
 <img src="./assets/preview-app.gif" alt="">
 
-## Structure folders
-* app:
-  > main process of application  
-  > **src** folder is the path folder of application where ***src/main.py*** is the entry file
-* docs: 
+
+## Description
+This is a Automatic Crossword generator web application. Basically, speciallized on filling a theme crossword and follows all the basic known rules.
+
+
+## Install
+### Python
+  ```python
+    $ python3 -m pip install -r requirements.txt
+  ```
+### Javascript  
+  Move terminal to cross_app folder
+  ```python
+    $ cd app/frontend/cross_app
+  ```
+  Install packages  
+  ```javascript
+    $ npm install 
+  ```
+  or with yarnpkg
+  ```javascript
+    $ yarn install
+  ```
+
+
+
+
+## Usage
+1. Backend  
+    Activate virtual environment
+    ```python
+      $ source bin/activate
+    ```  
+    Run server
+    ```python
+      $ flask run
+    ```
+    Exit environment  
+    ```python
+      $ deactivate
+    ```
+2. Frotend  
+    Run vue app locally
+    ```javascript
+      $ npm run serve
+    ```
+    or with yarnpkg
+    ```javascript
+      $ yarn serve
+    ```
+
+
+## Docs
+  Additionaly, you may have in mind read all the rules and other relative docs in the docs folder
   - basic rules - βασικοί κανόνες
   - process structure - δομή κώδικα
 
-## Setup Environment
-It is better to run this application in a virual environment  
 
-```python
-  # python3
-  # pip3 package-management system
-  # virtual environment - virtualenv
-  
-  # Run server
-  $ cd crossword_generator/
-  $ source bin/activate #activate environment
-  $ flask run
+## Printing
+> Present: .pdf
 
-  $ deactivate #exit environment
+> Future: .puz, LateX
 
-  #install any package locally in virtual environment
-  $ cd crossword_generator/
-  $ python3 -m pip install -r requirements.txt
 
-```
-
-```javascript
-  // Instalation
-    // 1. needs npm/yarn package manager
-
-  // Run vue app
-  $ cd app/frontend/cross_app
-  $ npm install / yarn install
-  $ npm run serve / yarn serve
-  // see relative readme.md
-
-```
+## Contribute
