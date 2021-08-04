@@ -5,7 +5,7 @@
 
 
 ## Description
-This is a Automatic Crossword generator web application. Basically, speciallized on filling a theme crossword and follows all the basic known rules.
+This is a Automatic Crossword generator web application. Basically, speciallized on filling in a theme crossword grid with words and follows all the basic known rules.
 
 
 ## Install
